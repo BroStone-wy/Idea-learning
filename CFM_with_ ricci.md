@@ -35,9 +35,9 @@
 
 2. **在 OOD + 低采样下的失效征兆（可度量）**：  
    - **震荡/漂移**：沿轨迹的  
-     $$
+     $
      \Delta E_{K}(k) = \mathbb{E}[K(x_k)] - \mathbb{E}[K(x_{k-1})]
-     $$  
+     $ 
      频繁为正； 表面/体场与可导映射，其中
      取蛋白 SES 三角网格 $\mathcal{M} = (V, F)$，每顶点预存 $(K_v, H_v, \kappa_{1,v}, \kappa_{2,v}, n_v)$；三角面内用**重心插值**得连续场 $\tilde{K}(p), \tilde{H}(p), \tilde{n}(p)$。   预计算有界平滑 SDF $\phi : \mathbb{R}^3 \to \mathbb{R}$（外部为正），其梯度 $\nabla \phi(r) = n(p)$ 在一阶可导。  对给定位姿 $x$ 的配体原子 $\{r_i(x)\}_{i=1}^N$，用最近点投影 $p_i = \Pi_{\mathcal{M}}(r_i)$，并以 SDF 构造**可导接触权重**：
       $$
@@ -438,5 +438,6 @@ $$
 - [EGNN](https://github.com/vgsatorras/egnn) （官方与社区版实现，便于快速起项目或做轻量等变细化头）  
 - [DiffDock](https://github.com/gcorso/DiffDock) （等变/三维几何任务中的扩散-对接流水线，适合作为“几何细化接口”的参考骨架）  
 - [TorchMD-NET](https://github.com/torchmd/torchmd-net) / [TorchMD](https://github.com/torchmd/torchmd) （分子几何与力场领域的等变网络与推理/MD 框架，便于嵌入“几何势”或正则）
+
 
 
