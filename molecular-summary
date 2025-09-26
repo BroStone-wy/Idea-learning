@@ -1,0 +1,6 @@
+## pocket-guided two-stage blind docking 
+- PGbind: pocket-guided explicit attention learning for protein–ligand docking，把 pocket 先验利用两类attention 增强蛋白口袋特征，几何自注意力 + 跨注意力。
+- PPdock: Pocket Prediction-Based Protein−Ligand Blind Docking, 基于预测口袋中心和pointnet算法得到锚点中心对口袋定位，加上阈值约束的口袋范围。
+- FABind: Fast and Accurate Protein-Ligand Binding，基于口袋中心 + 二分类约束预测，加EGNN构象迭代回归预测。
+- FABind+/FABFlex：FABind 的任务改进版：FABind+口袋和构象损失以及采样版的工程化改进；FABFlex相比，从半柔性变为全柔性任务，同时建模口袋和配体构象预测。
+
