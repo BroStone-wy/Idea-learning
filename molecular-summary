@@ -1,6 +1,11 @@
 ## pocket-guided two-stage blind docking 
-- PGbind: pocket-guided explicit attention learning for protein–ligand docking，把 pocket 先验利用两类attention 增强蛋白口袋特征，几何自注意力 + 跨注意力。
-- PPdock: Pocket Prediction-Based Protein−Ligand Blind Docking, 基于预测口袋中心和pointnet算法得到锚点中心对口袋定位，加上阈值约束的口袋范围。
-- FABind: Fast and Accurate Protein-Ligand Binding，基于口袋中心 + 二分类约束预测，加EGNN构象迭代回归预测。
-- FABind+/FABFlex：FABind 的任务改进版：FABind+口袋和构象损失以及采样版的工程化改进；FABFlex相比，从半柔性变为全柔性任务，同时建模口袋和配体构象预测。
+- FABind: Fast and Accurate Protein-Ligand Binding(NeurIPS,2023)，基于口袋中心 + 二分类约束预测，加EGNN构象迭代回归预测。
+- PGbind: pocket-guided explicit attention learning for protein–ligand docking(BiB,2024)，把 pocket 先验利用两类attention实现口袋特征增强，更准确的定位（比较水）。
+- PPdock: Pocket Prediction-Based Protein−Ligand Blind Docking(J. Chem. Inf. Model. 2025), 基于预测中心和pointnet算法得到口袋锚点中心进行口袋定位，并结合硬阈值约束给出口袋范围进行后续盲对接。
+- FABind+/FABFlex：FABind 的任务改进版(KDD,2025; ICLR,2025)：FABind+口袋和构象损失以及采样版的工程化改进；FABFlex相比，从半柔性变为全柔性任务，同时建模口袋和配体构象预测。
+- quickbind：A Light-Weight And Interpretable Molecular Docking Model(arxiv,2024) 轻量化的回归对接模型
+
+## generative model for docking
+- diffdock: Diffusion Steps, Twists, and Turns for Molecular Docking(ICLR 2023), 第一个利用扩散模型做半柔性对接，将构象分布建模为平移，旋转，扭转乘积空间，从生成角度学习对接配体构象。
+- DiffBindFR: an SE (3) equivariant network for flexible protein–ligand docking（Chem. Sci., 2024），diffdock的柔性对接模型，考虑配体构象柔性以及口袋侧链扭转变化的乘积空间上学习构象分布。
 
