@@ -9,3 +9,5 @@
 - diffdock: Diffusion Steps, Twists, and Turns for Molecular Docking(ICLR 2023), 第一个利用扩散模型做半柔性对接，将构象分布建模为平移，旋转，扭转乘积空间，从生成角度学习对接配体构象。
 - DiffBindFR: an SE (3) equivariant network for flexible protein–ligand docking（Chem. Sci., 2024），diffdock的柔性对接模型，考虑配体构象柔性以及口袋侧链扭转变化的乘积空间上学习构象分布。
 
+## binding ligand aware sites prediction
+- LABind: identifying protein binding ligand aware sites via learning interactions between ligand and protein(NC 2025),从配体与蛋白质信息交互角度考虑蛋白质对接节点的分类。
