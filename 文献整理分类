@@ -11,3 +11,7 @@
 
 ## binding ligand aware sites prediction
 - LABind: identifying protein binding ligand aware sites via learning interactions between ligand and protein(NC 2025),从配体与蛋白质信息交互角度考虑蛋白质对接节点的分类。
+
+
+## drug-target interaction prediction 
+- Evidential deep learning-based drug-target interaction prediction(NC,2025), 用于药物-靶标相互作用（DTI）预测，通过证据深度学习（EDL）量化样本预测的不确定性/置信度，补充预测的可靠性。
