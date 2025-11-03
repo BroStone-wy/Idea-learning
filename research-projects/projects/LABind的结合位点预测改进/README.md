@@ -8,6 +8,8 @@
 ## 💡 3. 改进思路（Improvement Summary）
 ### 🧭 问题背景
 - 原LABind框架仅通过配体全局语义向量和蛋白质残基向量（几何+语义），分别输入Graph_transformer中做cross_attention和self_attention，从而实现配体-蛋白信息交互；
+- 模型框架
+![LABind Architecture](./assets/architecture_overview.png)
 
 - 
 
