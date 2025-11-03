@@ -9,19 +9,26 @@
 ### 🧭 问题背景
 - 原LABind框架仅通过配体全局语义向量和蛋白质残基向量（几何+语义），分别输入Graph_transformer中做cross_attention和self_attention，从而实现配体-蛋白信息交互；
 - 模型框架
-![LABind Architecture](./assets/architecture_overview.png)
+<img width="544" height="541" alt="image" src="https://github.com/user-attachments/assets/6dcb8ec4-5da6-465a-9fcc-ee5765ff2168" />
 
-- 
+### 🧠 切入思路
+1.**语义分解（把配体全局向量拆成多子语义）**
+- 模型表现：
+  - 蛋白质残基特征（几何+序列）经过 cross-attention 被全局配体语义调制；
+  - 模型学到的是残基特征与配体类别的统计相关，“不知道为什么结合，只知道这类配体常常和哪类残基配对”；
+  - 缺少建模结构功能相关性，特征相互作用表达的注意力解释性差，对于未见过配体的结合方式泛化性差。
+- 改进思路：
+  - 配体语义局部功能化；局部+局部信息交互，具体详见[`versions/`](./versions/) 目录。
 
 ## 🧱 2. 版本进展（Version Timeline）
 
 | 版本 | 日期 | 主要变化 | 状态 |
 |------|------|----------|------|
-| v0.1 | 2025-11-03| 实现论文代码复现，结果还在运行 | ✅ 完成 |
-| v0.2 | 2025-11-05 | 引入 curvature-aware alignment 模块 | ⏳ 进行中 |
+| v0.1 | 2025-11-03| 实现论文代码复现，结果还在运行 | ⏳ 进行中 |
+| v0.2 | 2025-11-05 | 引入 curvature-aware alignment 模块 |✅ 完成  |
 | v1.0 | 预计 2025-12 | 融合 uncertainty-aware weighting + 报告论文初稿 | 🧩 计划中 |
 
-详见 [`versions/`](./versions/) 目录。
+
 
 ---
 
